@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Random Dice Simulator
+        </title>
+        <script>
+            function randomGenerator(lower, upper)
+            {
+                return Math.floor(lower + Math.random()*6);
+            }
+            function dice(times)
+            {
+                document.writeln('<h1>Random Dice Numbers Generator</h1><ol>')
+                for(var i=0; i<times; i++)
+                {
+                    document.write('<li>'+randomGenerator(1, 6)+', </li>');
+                }
+                document.write('</ol>')
+            }
+            window.addEventListener('run', dice(50), false);
+        </script>
+    </head>
+
+    <body>
+    </body>
+</html>
