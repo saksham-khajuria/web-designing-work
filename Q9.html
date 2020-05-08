@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Cookies</title>
+        <script>
+            function setCookie()
+            {
+                var inputs = document.getElementsByTagName("input");
+                for(var i=0; i<inputs.length; i++)
+                {
+                    document.cookie = inputs[i].id + "=" + inputs[i].value + ";";
+                }
+                alert(document.cookie);
+
+            }
+            function start()
+            {
+                var subBtn = document.getElementById('submit-btn');
+                subBtn.addEventListener('click', 
+                                      setCookie, 
+                                      false);
+            }
+            window.addEventListener('load', start, false);
+        </script>
+    </head>
+
+    <body>
+        <form id="reg-form">
+            <input id="f_name" type="text" placeholder="First Name" name="usrname"/>
+            <input id="l_name" type="text" placeholder="Last Name" name="usrname"/>
+            <input id="desc" type="text" placeholder="Description" name="usrnme"/>
+            <button id="submit-btn" value="Submit" name="submit">Submit</button>
+        </form>
+    </body>
+</html>
